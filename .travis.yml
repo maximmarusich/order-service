@@ -11,7 +11,7 @@ jobs:
     - stage : build
       script: ./mvnw clean install
       after_success:
-        - test $TRAVIS_BRANCH = "master" && ./mvnw pact:publish
+        - test TRAVIS_PULL_REQUEST = false && ./mvnw pact:publish
 
 branches:
   only:
