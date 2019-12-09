@@ -11,6 +11,6 @@ jobs:
     - stage : build
       script: ./mvnw clean install
 
-    - stage : publish
-      if: branch = master
-      script: ./mvnw pact:publish
+branches:
+  only:
+    - master
