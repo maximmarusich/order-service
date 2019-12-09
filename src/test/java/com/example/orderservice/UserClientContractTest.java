@@ -41,8 +41,8 @@ public class UserClientContractTest {
 
     private DslPart userResponseBody() {
         return new PactDslJsonBody()
-                .numberType("id")
-                .stringType("email");
+                .numberType("id", USER_ID)
+                .stringType("email", "some@gmail.com");
 
     }
 
