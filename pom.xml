@@ -67,7 +67,7 @@
                 <configuration>
                     <pactDirectory>${project.build.directory}/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
                     <pactBrokerUrl>http://52.205.249.52:9292</pactBrokerUrl>
-                    <projectVersion>${TRAVIS_BUILD_NUMBER}</projectVersion> <!-- Defaults to ${project.version} -->
+                    <projectVersion>0.0.${TRAVIS_BUILD_NUMBER}</projectVersion> <!-- Defaults to ${project.version} -->
                     <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
                 </configuration>
             </plugin>
