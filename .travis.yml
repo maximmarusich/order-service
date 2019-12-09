@@ -6,4 +6,10 @@ cache:
   directories:
     - $HOME/.m2
 
-script: ./mvnw clean install pact:publish
+jobs:
+  include:
+    - stage : build
+    - script: ./mvnw clean install
+    - stage : publish
+    if: branch = master
+    - script: ./mvnw pact:publish
